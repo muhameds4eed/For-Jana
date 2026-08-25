@@ -1,4 +1,4 @@
-// Tailwind Configuration
+// Tailwind Config
 tailwind.config = {
     theme: {
         extend: {
@@ -21,7 +21,7 @@ tailwind.config = {
                     900: 'rgb(131, 24, 67)',
                 },
                 envelope: {
-                    back: 'rgb(219, 39, 119)',
+                    back: 'rgb(219, 39, 119)',  
                     front: 'rgb(244, 114, 182)',
                     flap: 'rgb(249, 168, 212)',
                 }
@@ -30,7 +30,6 @@ tailwind.config = {
     }
 };
 
-// Memories Data
 const galleryItems = [
     { url: "https://i.postimg.cc/GmLs6j2Y/photo-(13).jpg", text: "21 years of pure magic 🎂" },
     { url: "https://i.postimg.cc/rwftTt0x/photo-(1).jpg", text: "Your smile lights up the room ✨" },
@@ -39,16 +38,15 @@ const galleryItems = [
     { url: "https://i.postimg.cc/c4MnDzsJ/photo-(8).jpg", text: "A new chapter full of joy 🎈" },
     { url: "https://i.postimg.cc/Cxhf9417/photo-(16).jpg", text: "The Eyes I Saw My Future And My Dreams In 🥹🦋💗" },
     { url: "https://i.postimg.cc/T3tWxWLq/photo-(2).jpg", text: "Unmatched elegance & grace 🌟" },
-    { url: "https://i.postimg.cc/rFL4NT24/photo-(3).jpg ", text: "Always As Shiny s Moon 🌙✨" },
+    { url: "https://i.postimg.cc/rFL4NT24/photo-(3).jpg ", text: "Our absolute favorite person 🍬" },
     { url: "https://i.postimg.cc/Wb6k9y2j/photo-(4).jpg", text: "All grown up into a Queen 👑" },
-    { url: "https://i.postimg.cc/jdQ781RF/photo-(5).jpg", text: "I Can Not Describe How Am I Addicted To Your Beauty 🫠" },
-    { url: "https://i.postimg.cc/dtmyWfqK/photo-(6).jpg", text: "The face where all my chaos turns into peace, and where I can just be me 😍" },
+    { url: "https://i.postimg.cc/jdQ781RF/photo-(5).jpg", text: "Memories we will cherish forever 📸" },
+    { url: "https://i.postimg.cc/dtmyWfqK/photo-(6).jpg", text: "21 candles illuminating your path 🕯️" },
     { url: "https://i.postimg.cc/SN7MZPyh/photo-(7).jpg", text: "The cutest smile on earth 😊   " },
     { url: "https://i.postimg.cc/BQcKhzqj/photo-(9).jpg", text: "Always making us so proud 🎓" },
-    { url: "https://i.postimg.cc/mDy4x7hk/photo-(101).jpg", text: "My Shaylaaaa 😭💗" },
+    { url: "https://i.postimg.cc/mDy4x7hk/photo-(101).jpg", text: "My Shyla 😭💗" },
 ];
 
-// Dynamic Gallery Render
 const galleryGrid = document.getElementById('gallery-grid');
 galleryItems.forEach((item, index) => {
     let revealDirection = 'reveal-up';
@@ -69,7 +67,6 @@ galleryItems.forEach((item, index) => {
     `;
 });
 
-// Scroll Reveal Observer
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -89,7 +86,6 @@ const observer = new IntersectionObserver((entries) => {
 const revealElements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
 revealElements.forEach(el => observer.observe(el));
 
-// Floating Background Emojis
 const emojiList = ['💕', '💝', '💖', '💓', '💐', '💞'];
 const emojiContainer = document.getElementById('floating-emojis-container');
 const numEmojis = 35; 
@@ -112,7 +108,6 @@ for (let i = 0; i < numEmojis; i++) {
     emojiContainer.appendChild(emojiEl);
 }
 
-// Envelope Interaction Control
 const envelope = document.getElementById('envelope');
 const letterAnim = document.getElementById('letter-anim');
 const realLetter = document.getElementById('real-letter');
@@ -172,7 +167,6 @@ closeBtn.addEventListener('click', (e) => {
     }, 2200);
 });
 
-// Music Player Logic
 const musicToggle = document.getElementById('music-toggle');
 const bgMusic = document.getElementById('bg-music');
 const playIcon = document.getElementById('play-icon');
